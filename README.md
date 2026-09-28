@@ -25,7 +25,7 @@ flowchart TB
     cfd --> homepage
 
     subgraph request ["Request"]
-        overseerr["Overseerr<br>films &amp; TV"]
+        overseerr["Seerr<br>films &amp; TV"]
         abr["audiobookrequest"]
     end
 
@@ -124,7 +124,7 @@ indexers directly, *not* through the VPN.
 | `flaresolverr` | Solves Cloudflare challenges for indexers that need it. |
 | `radarr` | Watches for movies, sends them to the downloader, renames and files them. |
 | `sonarr` | Same, for TV series. |
-| `overseerr` | Request page — users ask for a film or show without touching the backend apps. |
+| `overseerr` (Seerr) | Request page — users ask for a film or show without touching the backend apps. Runs [Seerr](https://docs.seerr.dev), the merged successor to Overseerr/Jellyseerr. |
 
 **Watching & listening**
 
@@ -325,7 +325,7 @@ sudo systemctl enable --now earlyoom
 | :-- | :-- |
 | Homepage | `http://IP:3000` |
 | Plex | `http://IP:32400/web` |
-| Overseerr | `http://IP:5055` |
+| Seerr (requests) | `http://IP:5055` |
 | Immich | `http://IP:2283` |
 | Audiobookshelf | `http://IP:13378` |
 | Audiobook requests | `http://IP:8001` |

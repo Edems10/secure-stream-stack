@@ -130,14 +130,14 @@ services:
     restart: unless-stopped
 
   overseerr:
-    image: lscr.io/linuxserver/overseerr:latest
+    image: ghcr.io/seerr-team/seerr:latest
     container_name: overseerr
+    init: true
     environment:
-      - PUID=${PUID:?no .env}
-      - PGID=${PGID:?no .env}
       - TZ=${TZ:?no .env}
+      - PORT=5055
     volumes:
-      - ${CONFIG_ROOT:?no .env}/overseerr:/config
+      - ${CONFIG_ROOT:?no .env}/overseerr:/app/config
     ports:
       - 5055:5055
     mem_limit: 384m
